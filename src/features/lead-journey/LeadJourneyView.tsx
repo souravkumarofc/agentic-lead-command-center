@@ -14,7 +14,7 @@ export const LeadJourneyView: React.FC = () => {
   // If no lead is selected, render a selector grid allowing user to choose any lead to inspect
   if (!selectedLead) {
     return (
-      <div className="p-6 max-w-5xl mx-auto space-y-6">
+      <div className="p-3 sm:p-6 max-w-5xl mx-auto space-y-4 sm:space-y-6 w-full max-w-full">
         <div className="glass-panel p-6 rounded-2xl border border-ops-border text-center space-y-3">
           <div className="w-12 h-12 rounded-xl bg-ops-card border border-slate-700 flex items-center justify-center mx-auto text-ops-cyan">
             <Users className="w-6 h-6" />
@@ -74,7 +74,7 @@ export const LeadJourneyView: React.FC = () => {
   }
 
   return (
-    <div className="p-4 lg:p-8 max-w-[1500px] mx-auto space-y-6">
+    <div className="p-3 sm:p-5 lg:p-8 max-w-[1500px] mx-auto space-y-4 sm:space-y-6 w-full max-w-full">
       {/* 1. Header Card with Details & Badges */}
       <LeadHeaderCard lead={selectedLead} />
 

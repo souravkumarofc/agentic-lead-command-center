@@ -20,7 +20,7 @@ export const CommandCenterView: React.FC = () => {
   } = usePipelineStore();
 
   return (
-    <div className="relative w-full h-[calc(100vh-4rem)] overflow-hidden bg-ops-bg">
+    <div className="relative w-full h-[calc(100vh-6rem)] md:h-[calc(100vh-4rem)] overflow-hidden bg-ops-bg">
       {/* 3D WebGL Canvas */}
       <SceneCanvas />
 

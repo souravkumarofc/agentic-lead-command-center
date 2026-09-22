@@ -44,7 +44,7 @@ export const LeadDrawerPreview: React.FC<LeadDrawerPreviewProps> = ({ lead, onCl
   };
 
   return (
-    <div className="fixed top-[4.5rem] right-4 bottom-24 w-[calc(100vw-2rem)] sm:w-[26rem] max-w-[26rem] z-40 pointer-events-none flex justify-end">
+    <div className="fixed top-24 sm:top-[4.5rem] right-2 sm:right-4 left-2 sm:left-auto bottom-20 sm:bottom-24 w-auto sm:w-[26rem] max-w-[26rem] z-40 pointer-events-none flex justify-end">
       <div className="w-full h-full glass-panel rounded-2xl border border-ops-border shadow-2xl backdrop-blur-xl flex flex-col pointer-events-auto overflow-hidden animate-in slide-in-from-right duration-300">
         {/* Header */}
         <div className="p-3.5 bg-ops-surface/90 border-b border-ops-border flex items-center justify-between">

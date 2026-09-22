@@ -8,7 +8,7 @@ interface LeadMetadataInspectorProps {
 
 export const LeadMetadataInspector: React.FC<LeadMetadataInspectorProps> = ({ lead }) => {
   return (
-    <div className="glass-panel p-5 rounded-2xl border border-ops-border space-y-4 font-mono text-xs">
+    <div className="glass-panel p-4 sm:p-5 rounded-2xl border border-ops-border space-y-4 font-mono text-xs w-full max-w-full overflow-hidden">
       <div className="flex items-center justify-between border-b border-slate-800 pb-3">
         <h3 className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
           <Terminal className="w-4 h-4 text-ops-cyan" />

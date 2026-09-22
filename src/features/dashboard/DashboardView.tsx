@@ -11,9 +11,9 @@ export const DashboardView: React.FC = () => {
   const { metrics, setActiveView, setFocusedZone } = usePipelineStore();
 
   return (
-    <div className="p-4 lg:p-8 max-w-[1600px] mx-auto space-y-6">
+    <div className="p-3 sm:p-5 lg:p-8 max-w-[1600px] mx-auto space-y-5 sm:space-y-6 w-full max-w-full">
       {/* Top Banner & Fast Navigation */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-2xl bg-gradient-to-r from-ops-surface via-ops-card to-ops-surface border border-ops-border shadow-lg">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-ops-surface via-ops-card to-ops-surface border border-ops-border shadow-lg">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-950 text-ops-cyan border border-cyan-800/80 uppercase">
@@ -21,7 +21,7 @@ export const DashboardView: React.FC = () => {
             </span>
             <span className="text-xs font-mono text-slate-400">Autonomous Sales Engine</span>
           </div>
-          <h1 className="text-xl lg:text-2xl font-bold font-mono tracking-tight text-slate-100">
+          <h1 className="text-xl sm:text-2xl font-bold font-mono tracking-tight text-slate-100">
             Enterprise Pipeline Telemetry
           </h1>
           <p className="text-xs text-slate-400 mt-1 max-w-2xl">
@@ -29,14 +29,14 @@ export const DashboardView: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 w-full md:w-auto">
           <button
             id="launch-command-center-cta"
             onClick={() => {
               setFocusedZone(null);
               setActiveView('command-center');
             }}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ops-cyan text-slate-950 font-bold font-mono text-xs hover:bg-cyan-300 transition-all shadow-md hover:shadow-cyan-500/20 group"
+            className="w-full sm:w-auto justify-center flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ops-cyan text-slate-950 font-bold font-mono text-xs hover:bg-cyan-300 transition-all shadow-md hover:shadow-cyan-500/20 group flex-shrink-0"
           >
             <Activity className="w-4 h-4" />
             <span>Launch 3D Command Center</span>
@@ -46,20 +46,20 @@ export const DashboardView: React.FC = () => {
       </div>
 
       {/* Top Key Metrics */}
-      <section>
+      <section className="w-full max-w-full">
         <MetricCards metrics={metrics} />
       </section>
 
       {/* Primary Analytics Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 w-full max-w-full">
         {/* Left Column: Stage Funnel & Sources */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="lg:col-span-7 space-y-5 sm:space-y-6">
           <StageFunnelChart stageDistribution={metrics.stageDistribution} />
           <SourceDistribution sourceDistribution={metrics.sourceDistribution} />
         </div>
 
         {/* Right Column: AI Agent Fleet & Activity Feed */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 space-y-5 sm:space-y-6">
           <AgentWorkloadMatrix agentWorkload={metrics.agentWorkload} />
           <RecentActivityFeed />
         </div>

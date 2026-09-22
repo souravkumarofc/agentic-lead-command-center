@@ -35,12 +35,12 @@ export default function App() {
   }, [activeView, selectedLeadId]);
 
   return (
-    <div className="min-h-screen bg-ops-bg text-slate-100 flex flex-col font-sans selection:bg-ops-cyan/30 selection:text-white">
+    <div className="min-h-screen bg-ops-bg text-slate-100 flex flex-col font-sans selection:bg-ops-cyan/30 selection:text-white w-full max-w-full overflow-x-hidden">
       {/* Top Navigation Bar */}
       <Navigation />
 
       {/* Main Viewport */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {activeView === 'dashboard' && <DashboardView />}
         {activeView === 'command-center' && <CommandCenterView />}
         {activeView === 'lead-journey' && <LeadJourneyView />}

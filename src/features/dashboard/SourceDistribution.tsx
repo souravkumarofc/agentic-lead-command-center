@@ -38,7 +38,7 @@ export const SourceDistribution: React.FC<SourceDistributionProps> = ({ sourceDi
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {sources.map((src) => {
           const count = sourceDistribution[src] || 0;
           const pct = Math.round((count / total) * 100);
